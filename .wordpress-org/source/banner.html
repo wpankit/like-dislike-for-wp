@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Like Dislike banner</title>
+<style>
+/* FONTS: build-assets.mjs injects the Inter and Manrope @font-face rules here. */
+/* BUTTONS: build-assets.mjs injects the plugin's buttons.css here. */
+
+:root {
+	--ink: #111827;
+	--body: #374151;
+	--blue: #2563eb;
+	--violet: #5a3ff2;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 772px;
+	height: 250px;
+	overflow: hidden;
+}
+
+body {
+	position: relative;
+	color: var(--ink);
+	font-family: Inter, sans-serif;
+	background:
+		radial-gradient(circle at 82% 12%, rgba(120, 140, 255, 0.45), transparent 46%),
+		radial-gradient(circle at 0% 110%, rgba(255, 150, 175, 0.35), transparent 40%),
+		linear-gradient(135deg, #f7f8ff 0%, #e9ecff 100%);
+}
+
+.copy {
+	position: absolute;
+	top: 38px;
+	left: 40px;
+	width: 330px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.brand img {
+	width: 60px;
+	height: 60px;
+	filter: drop-shadow(0 8px 14px rgba(60, 60, 200, 0.3));
+}
+
+.brand h1 {
+	font: 800 40px/1 Manrope, sans-serif;
+	letter-spacing: -0.025em;
+}
+
+.tagline {
+	margin-top: 16px;
+	color: var(--body);
+	font: 500 16px/1.45 Inter, sans-serif;
+}
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 16px;
+}
+
+.chip {
+	padding: 5px 10px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.92);
+	box-shadow: 0 1px 2px rgba(30, 30, 90, 0.08), inset 0 0 0 1px rgba(30, 30, 90, 0.08);
+	color: #1f2937;
+	font: 600 11.5px/1 Inter, sans-serif;
+}
+
+/* The article card ------------------------------------------------------------ */
+
+.card {
+	position: absolute;
+	top: 30px;
+	left: 404px;
+	width: 330px;
+	height: 250px;
+	padding: 20px 22px;
+	border-radius: 14px;
+	background: #fff;
+	box-shadow: 0 26px 50px rgba(40, 40, 140, 0.2), 0 0 0 1px rgba(30, 30, 90, 0.08);
+}
+
+.card h2 {
+	font: 700 17px/1.25 Manrope, sans-serif;
+	letter-spacing: -0.01em;
+}
+
+.line {
+	height: 7px;
+	margin-top: 10px;
+	border-radius: 4px;
+	background: #eceef4;
+}
+
+.line.short {
+	width: 72%;
+}
+
+.card .ldfw {
+	margin: 18px 0 0;
+	font-family: Inter, sans-serif;
+}
+
+.helpful {
+	position: absolute;
+	top: 188px;
+	left: 440px;
+	padding: 10px 14px;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 14px 30px rgba(40, 40, 140, 0.18), 0 0 0 1px rgba(30, 30, 90, 0.08);
+}
+
+.helpful .ldfw,
+.helpful .ldfw-buttons {
+	flex-wrap: nowrap;
+	margin: 0;
+	font-family: Inter, sans-serif;
+	white-space: nowrap;
+}
+</style>
+</head>
+<body>
+	<div class="copy">
+		<div class="brand">
+			<img src="ICON_URI" alt="">
+			<h1>Like Dislike</h1>
+		</div>
+		<p class="tagline">Like buttons with live counts, “Was this helpful?” votes and stats for your posts.</p>
+		<div class="chips">
+			<span class="chip">Live counts</span>
+			<span class="chip">Helpful votes</span>
+			<span class="chip">Comments</span>
+			<span class="chip">Most liked</span>
+		</div>
+	</div>
+
+	<div class="card">
+		<h2>The best coffee shops in Lisbon</h2>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line short"></div>
+		<div class="ldfw ldfw-style-pill ldfw-size-medium ldfw-counts-always ldfw-has-icons ldfw-has-voted" style="--ldfw-like:#2563eb;--ldfw-dislike:#dc2626">
+			<span class="ldfw-buttons">
+				<button type="button" class="ldfw-button ldfw-like is-active">ICON_LIKE<span class="ldfw-label">Like</span><span class="ldfw-count">128</span></button>
+				<button type="button" class="ldfw-button ldfw-dislike">ICON_DISLIKE<span class="ldfw-label">Dislike</span><span class="ldfw-count">9</span></button>
+			</span>
+		</div>
+	</div>
+
+	<div class="helpful">
+		<div class="ldfw ldfw-style-outline ldfw-size-small ldfw-counts-never ldfw-has-icons" style="--ldfw-like:#16a34a;--ldfw-dislike:#dc2626">
+			<span class="ldfw-prompt">Was this helpful?</span>
+			<span class="ldfw-buttons">
+				<button type="button" class="ldfw-button ldfw-like">ICON_LIKE<span class="ldfw-label">Yes</span></button>
+				<button type="button" class="ldfw-button ldfw-dislike">ICON_DISLIKE<span class="ldfw-label">No</span></button>
+			</span>
+		</div>
+	</div>
+</body>
+</html>

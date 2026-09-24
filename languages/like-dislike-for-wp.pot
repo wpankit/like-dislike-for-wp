@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-24T19:51:44+00:00\n"
+"POT-Creation-Date: 2026-09-24T20:02:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: like-dislike-for-wp\n"
@@ -699,12 +699,12 @@ msgid "List the most liked posts with the Most Liked Posts block, or:"
 msgstr ""
 
 #. translators: 1: number of days, 2: likes, 3: dislikes.
-#: includes/class-ldfw-stats.php:221
+#: includes/class-ldfw-stats.php:224
 msgid "Votes per day over %1$s days: %2$s likes and %3$s dislikes in total."
 msgstr ""
 
 #. translators: 1: date, 2: number of likes, 3: number of dislikes.
-#: includes/class-ldfw-stats.php:230
+#: includes/class-ldfw-stats.php:233
 msgid "%1$s: %2$s likes, %3$s dislikes"
 msgstr ""
 
