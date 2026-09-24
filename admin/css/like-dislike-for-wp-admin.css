@@ -1,0 +1,530 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+/* Customizing Bootstrap Colors for WP UltimaKit */
+/* Primary Color */
+.btn-primary, .badge-primary, .bg-primary {
+	background-color: #6610F2 !important;
+	border-color: #6610F2 !important;
+}
+
+/* Secondary Color */
+.btn-secondary, .badge-secondary, .bg-secondary {
+	background-color: #C0C0C0 !important;
+	border-color: #C0C0C0 !important;
+}
+
+/* Highlight/Action Color */
+.btn-warning, .badge-warning, .bg-warning {
+	background-color: #FFD700 !important;
+	border-color: #FFD700 !important;
+}
+
+/* You can extend these overrides further based on your design needs */
+
+
+/* Additional Styling for WP UltimaKit Full-Width Navigation */
+.navbar {
+	font-family: 'Arial', sans-serif;  /* You can change this to any preferred font */
+}
+
+.nav-item.nav-link:hover {
+	color: #FFD700 !important;
+}
+
+.nav-item.nav-link:last-child {
+	padding: 5px 15px;
+	border: 2px solid #FFD700;
+	border-radius: 20px;
+}
+
+.nav-item.nav-link:last-child:hover {
+	background-color: #FFD700;
+	color: #6610F2 !important;
+}
+
+
+
+.module-container {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 15px;
+	background-color: #FFFFFF;
+}
+
+.module-box {
+	background-color: #FFFFFF;
+	padding: 30px; /* Increased padding for space */
+	border: 2px solid #C0C0C0;
+	border-radius: 15px;
+	margin: 10px;
+	position: relative;
+	height: 200px;
+	box-sizing: border-box;
+}
+
+.module-title {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #6610F2;
+	font-size: 1.1rem;
+	max-width: 200px;
+}
+
+.module-description {
+	position: absolute;
+	top: 40px;
+	left: 10px;
+	font-size: 0.9em;
+	color: #666;
+	max-width: 90%;
+	margin-top: 15px;
+}
+
+.module-switch {
+	position: absolute;
+	top: 10px;
+	right: -30px;
+}
+
+.learn-more-link {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: #6610F2; /* Deep Purple text color */
+	text-decoration: none; /* Removes the underline */
+	border: 2px solid #6610F2; /* Deep Purple border */
+	padding: 5px 10px; /* Padding around the text */
+	border-radius: 8px; /* Rounded corners */
+	font-size: 0.9em; /* Slightly smaller text */
+	background-color: #FFFFFF; /* White background */
+	transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+	cursor: pointer;
+}
+
+.learn-more-link:hover {
+	background-color: #6610F2; /* Deep Purple background on hover */
+	color: #FFFFFF; /* White text on hover */
+}
+
+
+.pro-badge {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: #FFFFFF;  /* White text */
+	background: linear-gradient(45deg, #6610F2, #FFD700);  /* Gradient from Deep Purple to Gold */
+	padding: 2px 8px;
+	border-radius: 8px;
+	font-size: 0.8em;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  /* To enhance text visibility against the gradient */
+}
+
+.free-badge{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: #FFFFFF;  /* White text */
+	background: #6610F2;  /* Gradient from Deep Purple to Gold */
+	padding: 2px 8px;
+	border-radius: 8px;
+	font-size: 0.8em;
+}
+
+/* Hide the default checkbox */
+.form-check-input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/* Styling the label which acts as the visual switch */
+.form-check-label {
+	position: relative;
+	padding-left: 35px;  /* Space for the switch */
+	cursor: pointer;
+	font-weight: 600;  /* Making the text a bit bolder */
+
+	/* Visually hide the text but still accessible for screen readers */
+	text-indent: -9999px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+.form-check-label::before, .form-check-label::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* The track of the switch */
+.form-check-label::before {
+	left: 0;
+	width: 30px;
+	height: 16px;
+	background-color: #ddd;  /* Light grey for the track */
+	border-radius: 8px;
+	transition: background-color 0.3s;
+}
+
+/* The handle of the switch */
+.form-check-label::after {
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	background-color: #fff;  /* White for the handle */
+	border-radius: 50%;  /* Making it circular */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* A subtle shadow */
+	transition: left 0.3s;  /* Transition effect for smooth movement */
+}
+
+/* When the switch is checked */
+.form-check-input:checked + .form-check-label::before {
+	background-color: #6610F2;  /* Deep Purple for active state */
+}
+
+.form-check-input:checked + .form-check-label::after {
+	left: 16px;  /* Move it to the other end */
+}
+
+
+/* Style the tabs container */
+.nav-tabs {
+	border-bottom: 2px solid #C0C0C0; /* Silver border at the bottom of the tabs */
+	margin-bottom: 15px; /* Some space below the tabs before the content starts */
+}
+
+/* Style individual tabs */
+.nav-tabs .nav-item {
+	margin-bottom: -2px; /* This negates the bottom border to create a seamless transition to the tab content below */
+}
+
+.nav-tabs .nav-link {
+	border-radius: 8px 8px 0 0; /* Rounded top corners */
+	border: 2px solid transparent; /* Transparent border which will change on hover and active state */
+	color: #6610F2; /* Deep Purple text color */
+	padding: 10px 15px; /* Slightly larger padding for better click area */
+	transition: all 0.3s; /* Smooth transition for hover effects */
+	box-shadow: none;
+}
+
+/* Tab link on hover */
+.nav-tabs .nav-link:hover {
+	background-color: #F2F2F2; /* Light grey background */
+	border-color: #C0C0C0; /* Silver border */
+	box-shadow: none;
+}
+
+/* Active tab link */
+.nav-tabs .nav-link.active {
+	background-color: #FFFFFF; /* White background */
+	color: #6610F2; /* Deep Purple text color for consistency */
+	border-color: #C0C0C0 #C0C0C0 #FFFFFF; /* Borders on the top, left, and right with the bottom transparent (to blend with tab content below) */
+}
+
+/* Tab content container */
+.tab-content {
+	border: 2px solid #C0C0C0; /* Silver border */
+	border-top: none; /* Remove top border to blend with tabs */
+	border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+	padding: 20px; /* Padding inside the content area */
+	margin-top: -17px;
+}
+
+
+.plugin-badge {
+	position: absolute;
+	bottom: 10px;
+	right: 60px; /* Adjust based on the width of your PRO badge and any desired spacing */
+	color: #FFFFFF;
+	background-color: #007BFF;
+	padding: 2px 8px;
+	border-radius: 8px;
+	font-size: 0.8em;
+	z-index: 10;
+}
+
+.pro-badge {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: #FFFFFF;
+	background-color: #6610F2;
+	padding: 2px 8px;
+	border-radius: 8px;
+	font-size: 0.8em;
+}
+
+/* Additional colors for different plugins */
+.plugin-badge.woocommerce {
+	background-color: #96588A;
+}
+
+
+.module-filters {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px; /* Space before the module listing */
+}
+
+.filter-controls {
+	display: flex;
+	gap: 10px; /* Provides space between the filter dropdowns */
+}
+
+.module-filters .form-select,
+.module-filters .form-control {
+	width: auto; /* Adjust width to content for better flexibility */
+}
+
+.search-control {
+	width: 20%; /* Width for the search box */
+}
+
+.search-control input{
+	width: 100% !important;
+}
+
+/* Container for all Help Content */
+.help-container {
+	background-color: #f7f8fc; /* A light background color for contrast */
+	border-radius: 10px; /* Rounded corners for a modern look */
+	padding: 20px 30px; /* Padding around the content */
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* A subtle shadow for depth */
+}
+
+.help-section {
+	margin-bottom: 40px; /* Increased space between sections */
+}
+
+.faqs .faq-item {
+	margin-bottom: 20px;
+	border-left: 4px solid #6610F2; /* A left border highlight for FAQs */
+	padding-left: 15px; /* Padding to offset the FAQ content from the left border */
+}
+
+.faqs h3 {
+	color: #6610F2;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.help-section h2 {
+	border-bottom: 2px solid #e0e2e6; /* A bottom border for section titles */
+	padding-bottom: 10px; /* Padding to offset the title from the border */
+	margin-bottom: 20px;
+	font-size: 1.4em; /* Increased size for section titles */
+}
+
+.help-section a {
+	color: #007BFF;
+	text-decoration: none; /* No underline for a cleaner look */
+	transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.help-section a:hover {
+	color: #0056b3; /* Slightly darker blue on hover */
+}
+
+.plugins-container {
+	display: flex;
+	flex-wrap: wrap; /* Wrapping content for responsiveness */
+	gap: 20px; /* Space between individual plugin items */
+}
+
+.plugin-item {
+	flex: 1; /* Allows the plugin item to grow and fill available space */
+	max-width: calc(33.33% - 20px); /* For three items in a row accounting for gap */
+	background-color: #f7f8fc;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+	text-align: center; /* Centralizing the content for a clean look */
+}
+
+.plugin-image {
+	max-width: 100%; /* Ensures the image doesn't overflow the container */
+	height: auto;
+	margin-bottom: 15px; /* Space below the image */
+}
+
+.plugin-item h3 {
+	font-size: 1.2em;
+	color: #6610F2; /* Deep purple for title */
+	margin-bottom: 10px;
+}
+
+.explore-btn {
+	background-color: #007BFF; /* Bootstrap's primary blue */
+	color: #ffffff;
+	border-radius: 8px;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+.explore-btn:hover {
+	background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+
+
+/* Container Styles */
+.likedislikewp-plans-comparison-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	background-color: #f2f4f8; /* Subtle background */
+}
+
+/* Plan Block Styles */
+.likedislikewp-plan {
+	flex: 1;
+	margin: 15px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	transition: transform 0.3s;
+	background-color: #fff; /* White background */
+}
+
+/* Plan Block Hover Effect */
+.likedislikewp-plan:hover {
+	transform: scale(1.05); /* Slight grow effect on hover */
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Enhanced box shadow on hover */
+}
+
+/* Plan Title Styles */
+.likedislikewp-plan h2 {
+	font-size: 24px;
+	margin-top: 0;
+	color: #6610F2; /* Blue title color */
+}
+
+/* Price Styles */
+.likedislikewp-price {
+	font-size: 30px;
+	margin: 15px 0;
+	font-weight: bold;
+	color: #6610F2; /* Blue price color */
+}
+
+/* List Styles */
+.likedislikewp-ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* List Item Styles */
+.likedislikewp-li {
+	padding: 5px 0;
+	color: #333; /* Text color */
+}
+
+/* Unavailable Feature Styles */
+.likedislikewp-unavailable {
+	text-decoration: line-through;
+	color: #999; /* Grayed-out text for unavailable features */
+}
+
+/* Button Styles */
+.likedislikewp-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #6610F2; /* Blue button background */
+	color: #fff; /* White button text color */
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+.likedislikewp-btn:hover {
+	background-color: #6610F2; /* Darker blue on hover */
+}
+
+.likedislikewp-stats table th {
+    color: #000;
+}
+
+.likedislikewp-stats table td{ 
+    color: #666;
+}
+
+.likedislikewp-heading{
+    color: #ffffff;
+    background-color: #6610F2;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-collapse: collapse;
+    border-radius: 0.375rem;
+}
+.likedislikewp-posts-stats,
+.likedislikewp-pages-stats{
+    padding: 0px 0px 25px;
+}
+
+.likedislike-settings .form-check{
+	margin: 10px 0px;
+}
+
+.dashicons {
+	width: 150px;
+    height: 100px;
+    color: #6610F2;
+}
+
+.dashicons-chart-area:before,
+.dashicons-clock:before,
+.dashicons-chart-bar:before{
+	font-size: 100px;
+}
+
+#likedislikewpTabsContent .card{
+	height: 150px;
+}
+
+.card-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.875rem;
+}
+.card-body .row {
+    align-items: center; /* Center vertically */
+}
+.wpuk_icon {
+    font-size: 2rem; /* Adjust the size of the icon as needed */
+}
+.wpuk_digits {
+    font-size: 2.5rem; /* Adjust the size of the count as needed */
+    font-weight: bold;
+}
+.position-relative {
+    position: relative;
+}
+.table .dashicons {
+	width: 20px;
+    height: 20px;
+    color: #6610F2;
+    margin: 2px 7px;
+}

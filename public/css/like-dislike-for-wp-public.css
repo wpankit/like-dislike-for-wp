@@ -1,0 +1,16 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+
+.like-dislike-for-wp-button{
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+
+.like-dislike-for-wp-button:hover{
+    cursor: pointer;
+}
