@@ -1,0 +1,825 @@
+# Copyright (C) 2026 WPAnkit
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Like Dislike – Like Buttons, Helpful Votes & Most Liked Posts 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/like-dislike-for-wp\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-24T19:51:44+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: like-dislike-for-wp\n"
+
+#. Plugin Name of the plugin
+msgid "Like Dislike – Like Buttons, Helpful Votes & Most Liked Posts"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/like-dislike-for-wp/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Like and dislike buttons with live counts for posts, pages, products and comments, plus a \"Was this helpful?\" mode, most liked posts and stats."
+msgstr ""
+
+#. Author of the plugin
+msgid "WPAnkit"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wpankit.com/"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:37
+#: includes/class-ldfw-admin.php:38
+#: includes/class-ldfw-admin.php:454
+msgid "Like Dislike"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:45
+#: includes/class-ldfw-admin.php:288
+msgid "Like Dislike Stats"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:45
+#: includes/class-ldfw-admin.php:59
+#: includes/class-ldfw-admin.php:136
+msgid "Stats"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:46
+#: includes/class-ldfw-settings.php:280
+msgid "Like Dislike Settings"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:46
+#: includes/class-ldfw-admin.php:58
+#: includes/class-ldfw-admin.php:133
+#: assets/js/blocks.js:64
+msgid "Settings"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:95
+#: includes/class-ldfw-privacy.php:101
+#: includes/class-ldfw-settings.php:107
+#: includes/class-ldfw-settings.php:339
+msgid "Like"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:96
+#: includes/class-ldfw-privacy.php:101
+#: includes/class-ldfw-settings.php:107
+#: includes/class-ldfw-settings.php:343
+msgid "Dislike"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:97
+msgid "Yes"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:98
+msgid "No"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:99
+#: includes/class-ldfw-settings.php:328
+msgid "Was this helpful?"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:100
+msgid "Thanks for letting us know!"
+msgstr ""
+
+#. translators: %s: plugin version.
+#: includes/class-ldfw-admin.php:126
+msgid "Version %s"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:151
+msgid "Notes and team collaboration in WordPress"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:152
+msgid "A notes app in your admin, with checklists, reminders, shared notes, and comments and issues on posts."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:158
+msgid "Privacy-first analytics inside WordPress"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:159
+msgid "See visitors and page views right in your dashboard, with no cookies and no external scripts."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:167
+msgid "Keep Google Sheets in sync with WordPress"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:173
+msgid "Admin tools, security and performance in one plugin"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:179
+msgid "Hide the toolbar for the roles you choose"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:186
+msgid "Like Dislike is free to use"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:187
+msgid "Everything in Like Dislike is free, and what's free stays free. If it helps your site, a short review on WordPress.org helps other people find it."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:190
+#: includes/class-ldfw-review.php:165
+msgid "Leave a review"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:191
+#: includes/class-ldfw-admin.php:207
+#: includes/class-ldfw-review.php:166
+#: includes/class-ldfw-review.php:185
+#: includes/class-ldfw-review.php:203
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:193
+msgid "Get help or suggest a feature"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:196
+msgid "More from the makers of Like Dislike"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:207
+msgid "Learn more"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:210
+msgid "More free plugins"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:237
+msgid "7 days"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:238
+msgid "30 days"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:239
+msgid "90 days"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:240
+msgid "12 months"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:241
+#: assets/js/blocks.js:76
+msgid "All time"
+msgstr ""
+
+#. translators: %s: percentage of votes that are likes.
+#: includes/class-ldfw-admin.php:267
+msgid "%s%% liked it"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:290
+msgid "Period"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:297
+#: includes/class-ldfw-admin.php:310
+#: includes/class-ldfw-admin.php:381
+msgid "Likes"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:298
+#: includes/class-ldfw-admin.php:310
+msgid "Dislikes"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:299
+msgid "Votes"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:300
+msgid "Liked it"
+msgstr ""
+
+#. translators: %s: number of days.
+#: includes/class-ldfw-admin.php:307
+msgid "Votes per day, last %s day"
+msgid_plural "Votes per day, last %s days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-ldfw-admin.php:316
+msgid "Most liked"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:317
+msgid "No likes in this period."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:320
+msgid "Most disliked"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:321
+msgid "Worth a second look: these got the most dislikes."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:322
+msgid "No dislikes in this period."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:327
+msgid "What readers said could be better"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:333
+msgid "No answers yet. They appear here when someone dislikes a post and says why."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:334
+msgid "Turn on \"Ask what could be better after a dislike\" in Settings to collect answers here."
+msgstr ""
+
+#. translators: %s: time since, like "5 mins".
+#: includes/class-ldfw-admin.php:347
+msgid "%s ago"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:408
+msgid "No votes"
+msgstr ""
+
+#. translators: %s: number of likes.
+#: includes/class-ldfw-admin.php:470
+#: includes/class-ldfw-render.php:410
+msgid "%s like"
+msgid_plural "%s likes"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of dislikes.
+#: includes/class-ldfw-admin.php:476
+msgid "%s dislike"
+msgid_plural "%s dislikes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-ldfw-admin.php:483
+msgid "Hide the buttons on this post"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:488
+msgid "Remove every like and dislike on this post? This cannot be undone."
+msgstr ""
+
+#: includes/class-ldfw-admin.php:488
+msgid "Reset votes"
+msgstr ""
+
+#: includes/class-ldfw-admin.php:521
+msgid "You cannot reset the votes on this post."
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:33
+msgid "When you like or dislike a post or a comment, we store your vote and the date. If you are logged in, the vote is linked to your account. If you are not, we store a random ID in a cookie named ldfw_visitor and a one-way hash of your IP address, so that each person votes once; your IP address itself is not stored. If you tell us what could be better after a dislike, we store your answer with your vote."
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:45
+#: includes/class-ldfw-privacy.php:59
+#: includes/class-ldfw-privacy.php:116
+msgid "Likes and dislikes"
+msgstr ""
+
+#. translators: %s: post title.
+#: includes/class-ldfw-privacy.php:90
+msgid "A comment on “%s”"
+msgstr ""
+
+#. translators: %s: post title.
+#: includes/class-ldfw-privacy.php:90
+msgid "A deleted comment"
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:92
+msgid "A deleted post"
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:96
+msgid "Item"
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:100
+msgid "Vote"
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:104
+msgid "Date"
+msgstr ""
+
+#: includes/class-ldfw-privacy.php:110
+msgid "What could be better"
+msgstr ""
+
+#: includes/class-ldfw-render.php:46
+msgid "Thumbs"
+msgstr ""
+
+#: includes/class-ldfw-render.php:51
+#: includes/class-ldfw-settings.php:329
+msgid "Hearts"
+msgstr ""
+
+#: includes/class-ldfw-render.php:56
+msgid "Arrows"
+msgstr ""
+
+#: includes/class-ldfw-render.php:61
+msgid "Faces"
+msgstr ""
+
+#: includes/class-ldfw-render.php:66
+msgid "Text only"
+msgstr ""
+
+#: includes/class-ldfw-render.php:190
+#: includes/class-ldfw-votes.php:189
+msgid "Please log in to vote."
+msgstr ""
+
+#: includes/class-ldfw-render.php:191
+msgid "Log in"
+msgstr ""
+
+#: includes/class-ldfw-render.php:192
+msgid "Your vote could not be saved. Please try again."
+msgstr ""
+
+#: includes/class-ldfw-render.php:193
+#: assets/js/admin.js:75
+msgid "What could be better?"
+msgstr ""
+
+#: includes/class-ldfw-render.php:194
+#: assets/js/admin.js:76
+msgid "Tell us what was missing or unclear (optional)."
+msgstr ""
+
+#: includes/class-ldfw-render.php:195
+#: assets/js/admin.js:77
+msgid "Send"
+msgstr ""
+
+#: includes/class-ldfw-render.php:196
+msgid "Thank you. Your feedback helps us improve."
+msgstr ""
+
+#: includes/class-ldfw-render.php:235
+msgid "Rate this comment"
+msgstr ""
+
+#: includes/class-ldfw-render.php:235
+msgid "Rate this"
+msgstr ""
+
+#: includes/class-ldfw-render.php:402
+msgid "No likes yet."
+msgstr ""
+
+#: includes/class-ldfw-rest.php:91
+msgid "Like and dislike counts."
+msgstr ""
+
+#: includes/class-ldfw-rest.php:147
+msgid "Feedback is turned off on this site."
+msgstr ""
+
+#: includes/class-ldfw-rest.php:157
+msgid "Please write a few words first."
+msgstr ""
+
+#: includes/class-ldfw-review.php:155
+msgid "Enjoying Like Dislike?"
+msgstr ""
+
+#. translators: %s: number of votes.
+#: includes/class-ldfw-review.php:158
+msgid "Your readers have voted %s time so far."
+msgid_plural "Your readers have voted %s times so far."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-ldfw-review.php:160
+msgid "A quick review on WordPress.org takes a minute and helps other site owners find it."
+msgstr ""
+
+#: includes/class-ldfw-review.php:168
+msgid "Maybe later"
+msgstr ""
+
+#: includes/class-ldfw-review.php:169
+msgid "I already did"
+msgstr ""
+
+#: includes/class-ldfw-review.php:185
+msgid "Rate Like Dislike"
+msgstr ""
+
+#. translators: %s: five-star rating link.
+#: includes/class-ldfw-review.php:202
+msgid "If Like Dislike helps your site, please rate it %s on WordPress.org. Thank you!"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:274
+msgid "Pill"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:275
+msgid "Outline"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:276
+msgid "Minimal"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:289
+msgid "Where the buttons appear"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:291
+msgid "Add the buttons automatically"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:291
+msgid "Show the buttons on single posts of the types below. Turn this off to place them only with the block or shortcode."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:294
+msgid "Show them on"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:307
+msgid "After the content"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:308
+msgid "Before the content"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:309
+msgid "Before and after"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:311
+msgid "Position"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:317
+msgid "Show the dislike button"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:317
+msgid "Turn this off for a single like button."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:318
+msgid "Add buttons to comments"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:318
+msgid "Readers can like or dislike each comment on the post types above."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:324
+msgid "Look"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:325
+msgid "Presets"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:326
+msgid "Start from:"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:327
+msgid "Like and dislike"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:330
+msgid "Up and down votes"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:333
+msgid "Icons"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:334
+msgid "Button style"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:338
+msgid "Like label"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:342
+msgid "Dislike label"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:346
+msgid "Like colour"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:350
+msgid "Dislike colour"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:354
+msgid "Size"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:356
+msgid "Small"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:357
+msgid "Medium"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:358
+msgid "Large"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:362
+msgid "Alignment"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:364
+msgid "Left"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:365
+msgid "Centre"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:366
+msgid "Right"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:370
+msgid "Counts"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:372
+msgid "Show them"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:373
+msgid "Show them after someone votes"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:374
+msgid "Hide them"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:381
+msgid "Words and feedback"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:384
+msgid "Question above the buttons"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:385
+msgid "For example: Was this article helpful?"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:388
+msgid "Thank-you message after a vote"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:389
+msgid "For example: Thanks for letting us know!"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:393
+msgid "Ask what could be better after a dislike"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:393
+msgid "A short text box appears after a dislike. Answers show up under Like Dislike → Stats."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:398
+msgid "Voting"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:404
+msgid "Everyone"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:405
+msgid "Logged-in users only"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:407
+msgid "Who can vote"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:414
+msgid "One vote per browser (recommended)"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:415
+msgid "One vote per IP address"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:417
+msgid "Visitors who are not logged in get"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:421
+msgid "Logged-in users always get one vote per item. Per browser lets several people on the same network vote; per IP address is stricter but counts a whole office or school as one voter. IP addresses are never stored, only a keyed hash."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:425
+msgid "Admin and data"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:428
+msgid "Likes column in post lists"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:428
+msgid "Adds a sortable Likes column to the Posts screen and the lists of the other types above."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:429
+msgid "Delete all votes and settings when the plugin is deleted"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:429
+msgid "Deactivating always keeps everything. This cannot be undone."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:434
+msgid "Save Settings"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:439
+#: assets/js/admin.js:61
+msgid "Preview"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:440
+msgid "Try the buttons. The preview follows your changes before you save."
+msgstr ""
+
+#: includes/class-ldfw-settings.php:448
+msgid "Place them yourself"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:449
+msgid "Add the Like Dislike Buttons block anywhere in a post or template, or use a shortcode:"
+msgstr ""
+
+#: includes/class-ldfw-settings.php:451
+msgid "List the most liked posts with the Most Liked Posts block, or:"
+msgstr ""
+
+#. translators: 1: number of days, 2: likes, 3: dislikes.
+#: includes/class-ldfw-stats.php:221
+msgid "Votes per day over %1$s days: %2$s likes and %3$s dislikes in total."
+msgstr ""
+
+#. translators: 1: date, 2: number of likes, 3: number of dislikes.
+#: includes/class-ldfw-stats.php:230
+msgid "%1$s: %2$s likes, %3$s dislikes"
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:103
+msgid "Like Dislike 3.0 is ready."
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:106
+msgid "The buttons now show live counts and remember each vote, visitors can change their mind, and there are new styles, a \"Was this helpful?\" mode, likes on comments and a Stats screen. Your votes and settings were kept."
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:108
+msgid "Like and dislike buttons now appear after your posts. Choose their look, where they appear and more in Settings."
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:110
+msgid "Choose where the buttons appear and how they look in Settings."
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:115
+msgid "Open Settings"
+msgstr ""
+
+#: includes/class-ldfw-upgrade.php:116
+msgid "Dismiss"
+msgstr ""
+
+#: includes/class-ldfw-votes.php:195
+msgid "This comment can no longer be voted on."
+msgstr ""
+
+#: includes/class-ldfw-votes.php:203
+msgid "This item can no longer be voted on."
+msgstr ""
+
+#: includes/class-ldfw-votes.php:223
+msgid "Your vote could not be recorded. Please allow cookies and try again."
+msgstr ""
+
+#: includes/class-ldfw-votes.php:252
+msgid "Too many votes from your network. Please try again later."
+msgstr ""
+
+#: includes/class-ldfw-votes.php:331
+msgid "Your vote could not be found. Please try again."
+msgstr ""
+
+#: assets/js/blocks.js:30
+msgid "Like Dislike Buttons"
+msgstr ""
+
+#: assets/js/blocks.js:31
+msgid "Like and dislike buttons for this post, styled in Like Dislike → Settings."
+msgstr ""
+
+#: assets/js/blocks.js:34
+msgid "like"
+msgstr ""
+
+#: assets/js/blocks.js:34
+msgid "vote"
+msgstr ""
+
+#: assets/js/blocks.js:34
+msgid "helpful"
+msgstr ""
+
+#: assets/js/blocks.js:42
+msgid "Most Liked Posts"
+msgstr ""
+
+#: assets/js/blocks.js:43
+msgid "A list of the posts with the most likes."
+msgstr ""
+
+#: assets/js/blocks.js:46
+msgid "popular"
+msgstr ""
+
+#: assets/js/blocks.js:46
+msgid "top"
+msgstr ""
+
+#: assets/js/blocks.js:46
+msgid "likes"
+msgstr ""
+
+#: assets/js/blocks.js:66
+msgid "Number of posts"
+msgstr ""
+
+#: assets/js/blocks.js:73
+msgid "Liked during"
+msgstr ""
+
+#: assets/js/blocks.js:77
+msgid "The last 12 months"
+msgstr ""
+
+#: assets/js/blocks.js:78
+msgid "The last 30 days"
+msgstr ""
+
+#: assets/js/blocks.js:79
+msgid "The last 7 days"
+msgstr ""
+
+#: assets/js/blocks.js:84
+msgid "Post type"
+msgstr ""
+
+#: assets/js/blocks.js:85
+msgid "For example post, page or product."
+msgstr ""
+
+#: assets/js/blocks.js:90
+msgid "Show like counts"
+msgstr ""

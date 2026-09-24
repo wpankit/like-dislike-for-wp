@@ -1,0 +1,304 @@
+/**
+ * Like Dislike buttons.
+ *
+ * Colours come from --ldfw-like and --ldfw-dislike, set on each block of buttons.
+ */
+
+.ldfw {
+	--ldfw-like: #2563eb;
+	--ldfw-dislike: #dc2626;
+	--ldfw-line: rgba(127, 127, 127, 0.35);
+	--ldfw-soft: rgba(127, 127, 127, 0.08);
+	--ldfw-font: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 14px;
+	margin: 1.6em 0;
+	font-size: var(--ldfw-font);
+	line-height: 1.2;
+}
+
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+	.ldfw {
+		--ldfw-line: color-mix(in srgb, currentColor 18%, transparent);
+		--ldfw-soft: color-mix(in srgb, currentColor 6%, transparent);
+	}
+}
+
+.ldfw.ldfw-align-center {
+	justify-content: center;
+}
+
+.ldfw.ldfw-align-right {
+	justify-content: flex-end;
+}
+
+.ldfw-size-small {
+	--ldfw-font: 13px;
+}
+
+.ldfw-size-large {
+	--ldfw-font: 17px;
+}
+
+.ldfw-prompt {
+	font-weight: 600;
+}
+
+.ldfw-buttons {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.ldfw .ldfw-button {
+	--ldfw-color: var(--ldfw-like);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	min-height: 2.4em;
+	margin: 0;
+	padding: 0.4em 0.95em;
+	border: 1px solid var(--ldfw-line);
+	border-radius: 999px;
+	background: var(--ldfw-soft);
+	box-shadow: none;
+	color: inherit;
+	font: inherit;
+	font-size: 1em;
+	font-weight: 500;
+	letter-spacing: normal;
+	line-height: 1.2;
+	text-decoration: none;
+	text-transform: none;
+	cursor: pointer;
+	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.ldfw .ldfw-dislike {
+	--ldfw-color: var(--ldfw-dislike);
+}
+
+.ldfw .ldfw-button:hover {
+	border-color: color-mix(in srgb, var(--ldfw-color) 55%, transparent);
+	background: color-mix(in srgb, var(--ldfw-color) 8%, transparent);
+	color: inherit;
+}
+
+.ldfw .ldfw-button:focus-visible {
+	outline: 2px solid var(--ldfw-color);
+	outline-offset: 2px;
+}
+
+.ldfw .ldfw-button.is-active {
+	border-color: var(--ldfw-color);
+	background: color-mix(in srgb, var(--ldfw-color) 12%, transparent);
+	color: var(--ldfw-color);
+}
+
+.ldfw .ldfw-button[disabled] {
+	cursor: default;
+	opacity: 0.6;
+}
+
+.ldfw-icon {
+	flex: none;
+	width: 1.25em;
+	height: 1.25em;
+}
+
+.ldfw .is-active .ldfw-icon .ldfw-fill {
+	fill: currentColor;
+	fill-opacity: 0.25;
+}
+
+.ldfw-count {
+	min-width: 1ch;
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+}
+
+.ldfw .ldfw-button .ldfw-count::before {
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 0.9em;
+	margin-right: 0.45em;
+	background: var(--ldfw-line);
+	vertical-align: -0.1em;
+}
+
+/* Outline: square corners, no fill. */
+
+.ldfw-style-outline .ldfw-button {
+	border-radius: 8px;
+	background: transparent;
+}
+
+/* Minimal: icons and counts only. */
+
+.ldfw-style-minimal .ldfw-buttons {
+	gap: 4px;
+}
+
+.ldfw-style-minimal .ldfw-button {
+	padding: 0.35em 0.55em;
+	border-color: transparent;
+	border-radius: 8px;
+	background: transparent;
+}
+
+.ldfw-style-minimal.ldfw-has-icons .ldfw-label,
+.ldfw-is-comment.ldfw-has-icons .ldfw-label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.ldfw-style-minimal .ldfw-button .ldfw-count::before,
+.ldfw-is-comment .ldfw-button .ldfw-count::before {
+	display: none;
+}
+
+.ldfw-style-minimal .ldfw-button.is-active {
+	border-color: transparent;
+}
+
+/* Comments: small and quiet. */
+
+.ldfw.ldfw-is-comment {
+	margin: 0.6em 0 0;
+}
+
+.ldfw-is-comment .ldfw-button {
+	min-height: 2em;
+	padding: 0.25em 0.6em;
+	border-color: transparent;
+	background: transparent;
+}
+
+/* Counts after someone votes. */
+
+.ldfw-counts-after:not(.ldfw-has-voted) .ldfw-count {
+	display: none;
+}
+
+/* Messages and feedback. */
+
+.ldfw-message {
+	flex-basis: 100%;
+	font-size: 0.9em;
+	opacity: 0.85;
+}
+
+.ldfw-message:empty {
+	display: none;
+}
+
+.ldfw-message a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.ldfw-feedback {
+	display: grid;
+	flex-basis: 100%;
+	gap: 8px;
+	max-width: 520px;
+}
+
+.ldfw-feedback label {
+	font-weight: 600;
+}
+
+.ldfw-feedback textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 5em;
+	padding: 0.6em 0.75em;
+	border: 1px solid var(--ldfw-line);
+	border-radius: 8px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	font-size: 0.95em;
+}
+
+.ldfw-feedback .ldfw-send {
+	justify-self: start;
+	padding: 0.45em 1.1em;
+	border: 0;
+	border-radius: 999px;
+	background: var(--ldfw-like);
+	color: #fff;
+	font: inherit;
+	font-size: 0.95em;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@keyframes ldfw-pop {
+	40% {
+		transform: scale(1.12);
+	}
+}
+
+.ldfw .ldfw-button.is-popping .ldfw-icon {
+	animation: ldfw-pop 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ldfw .ldfw-button {
+		transition: none;
+	}
+
+	.ldfw .ldfw-button.is-popping .ldfw-icon {
+		animation: none;
+	}
+}
+
+/* Most liked posts. */
+
+.ldfw-most-liked {
+	margin-left: 0;
+	padding-left: 1.4em;
+}
+
+.ldfw-most-liked li {
+	margin: 0 0 0.5em;
+}
+
+.ldfw-most-liked-count {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25em;
+	margin-left: 0.35em;
+	color: var(--ldfw-like, #2563eb);
+	font-size: 0.85em;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.ldfw-most-liked-count .ldfw-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.ldfw-most-liked-count .ldfw-fill {
+	fill: currentColor;
+	fill-opacity: 0.25;
+}
+
+.ldfw .screen-reader-text,
+.ldfw-most-liked .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
