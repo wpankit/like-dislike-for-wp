@@ -1,7 +1,7 @@
 <?php
 /**
  * Demo content for Like Dislike screenshots: a small coffee blog with votes,
- * comments and feedback. Run with: wp eval-file demo.php
+ * comments and feedback. From the plugin folder, run: wp eval-file tools/wporg-assets/demo.php
  *
  * The posts are drafts. The screenshot script publishes them while it runs and
  * returns them to drafts afterwards. Running this again replaces the earlier demo.

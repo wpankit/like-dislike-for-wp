@@ -1,15 +1,16 @@
 /**
  * Builds the wordpress.org listing assets for Like Dislike.
  *
- *   node .wordpress-org/build-assets.mjs                         icon PNGs and banners
- *   node .wordpress-org/build-assets.mjs --screenshots           also the screenshots
- *   node .wordpress-org/build-assets.mjs --screenshots --only=stats,settings   just those
+ *   node tools/wporg-assets/build-assets.mjs                         icon PNGs and banners
+ *   node tools/wporg-assets/build-assets.mjs --screenshots           also the screenshots
+ *   node tools/wporg-assets/build-assets.mjs --screenshots --only=stats,settings   just those
  *
- * The icon PNGs come from icon.svg and the banners from source/banner.html, rendered
- * in headless Chrome at the exact sizes wordpress.org expects.
+ * Everything is written to .wordpress-org/ at the repository root. The icon PNGs come
+ * from .wordpress-org/icon.svg and the banners from banner.html next to this script,
+ * rendered in headless Chrome at the exact sizes wordpress.org expects.
  *
  * Screenshots come from the real plugin on a local site with the demo content from
- * source/demo.php (wp eval-file .wordpress-org/source/demo.php): a small coffee blog
+ * demo.php (wp eval-file tools/wporg-assets/demo.php): a small coffee blog
  * with votes, comments and feedback, kept as drafts. While the script runs it
  * publishes the demo posts, applies showcase settings and loads a temporary
  * must-use plugin that shows a made-up site name and limits the Posts screen to the
@@ -31,7 +32,9 @@ import { homedir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 
 const HERE = dirname( fileURLToPath( import.meta.url ) );
-const PLUGIN = dirname( HERE );
+const PLUGIN = join( HERE, '../..' );
+// The listing assets, deployed to the SVN assets/ directory.
+const ASSETS = join( PLUGIN, '.wordpress-org' );
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const QA = process.env.LDFW_QA_DIR || join( homedir(), 'Local Sites/pushrow-lp/app/public/wp-content/themes/wpankit-product/tools/qa' );
 const SITE_PATH = process.env.LDFW_SITE_PATH || join( homedir(), 'Local Sites/other-plugin/app/public' );
@@ -60,7 +63,7 @@ const FONTS = [ font( 'Inter', 'inter', 500 ), font( 'Inter', 'inter', 600 ), fo
 const BUTTONS_CSS = readFileSync( join( PLUGIN, 'assets/css/buttons.css' ), 'utf8' );
 
 const dataUri = ( file, type ) => `data:${ type };base64,` + readFileSync( file ).toString( 'base64' );
-const iconUri = dataUri( join( HERE, 'icon.svg' ), 'image/svg+xml' );
+const iconUri = dataUri( join( ASSETS, 'icon.svg' ), 'image/svg+xml' );
 
 function pngSize( file ) {
 	const b = readFileSync( file );
@@ -68,8 +71,8 @@ function pngSize( file ) {
 }
 
 function report( name ) {
-	const [ w, h ] = pngSize( join( HERE, name ) );
-	console.log( `${ name }  ${ w }x${ h }  ${ Math.round( statSync( join( HERE, name ) ).size / 1024 ) } KB` );
+	const [ w, h ] = pngSize( join( ASSETS, name ) );
+	console.log( `${ name }  ${ w }x${ h }  ${ Math.round( statSync( join( ASSETS, name ) ).size / 1024 ) } KB` );
 	return [ w, h ];
 }
 
@@ -154,7 +157,7 @@ async function shoot( page, key, clip ) {
 	}
 	await park( page );
 	await sleep( 350 );
-	await page.screenshot( { path: join( HERE, fileFor( key ) ), ...( clip ? { clip } : {} ) } );
+	await page.screenshot( { path: join( ASSETS, fileFor( key ) ), ...( clip ? { clip } : {} ) } );
 	report( fileFor( key ) );
 }
 
@@ -291,15 +294,15 @@ async function screenshots( browser ) {
 			{ waitUntil: 'load' }
 		);
 		await board.evaluate( () => document.fonts.ready );
-		await board.screenshot( { path: join( HERE, fileFor( 'styles' ) ) } );
+		await board.screenshot( { path: join( ASSETS, fileFor( 'styles' ) ) } );
 		report( fileFor( 'styles' ) );
 		await board.close();
 	}
 
-	for ( const name of readdirSync( HERE ) ) {
+	for ( const name of readdirSync( ASSETS ) ) {
 		const n = /^screenshot-(\d+)\.png$/.exec( name );
 		if ( n && Number( n[ 1 ] ) > SHOTS.length ) {
-			unlinkSync( join( HERE, name ) );
+			unlinkSync( join( ASSETS, name ) );
 		}
 	}
 }
@@ -357,13 +360,13 @@ try {
 		await page.setViewport( { width: size, height: size, deviceScaleFactor: 1 } );
 		await page.setContent( `<html><body style="margin:0;background:transparent"><img src="${ iconUri }" width="${ size }" height="${ size }" style="display:block"></body></html>` );
 		const name = `icon-${ size }x${ size }.png`;
-		await page.screenshot( { path: join( HERE, name ), omitBackground: true, clip: { x: 0, y: 0, width: size, height: size } } );
+		await page.screenshot( { path: join( ASSETS, name ), omitBackground: true, clip: { x: 0, y: 0, width: size, height: size } } );
 		check( name, size, size );
 	}
 
 	/* Banners */
 	const sets = JSON.parse( wp( 'eval', 'echo wp_json_encode( array( "like" => LDFW_Render::icon( "thumbs", "like" ), "dislike" => LDFW_Render::icon( "thumbs", "dislike" ) ) );' ) );
-	const banner = readFileSync( join( HERE, 'source/banner.html' ), 'utf8' )
+	const banner = readFileSync( join( HERE, 'banner.html' ), 'utf8' )
 		.replace( '/* FONTS: build-assets.mjs injects the Inter and Manrope @font-face rules here. */', FONTS )
 		.replace( "/* BUTTONS: build-assets.mjs injects the plugin's buttons.css here. */", BUTTONS_CSS )
 		.replaceAll( 'ICON_URI', iconUri )
@@ -379,7 +382,7 @@ try {
 			throw new Error( 'Fonts not loaded: ' + missing.join( ', ' ) );
 		}
 		const name = `banner-${ width }x${ height }.png`;
-		await page.screenshot( { path: join( HERE, name ), clip: { x: 0, y: 0, width: 772, height: 250 } } );
+		await page.screenshot( { path: join( ASSETS, name ), clip: { x: 0, y: 0, width: 772, height: 250 } } );
 		check( name, width, height );
 	}
 } finally {
