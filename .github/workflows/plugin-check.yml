@@ -1,0 +1,38 @@
+name: Plugin Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # Lets the action post its summary as a comment on pull requests.
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plugin-check:
+    name: WordPress.org Plugin Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v7
+
+      # Check the plugin exactly as it ships: .gitattributes keeps development files out.
+      - name: Build the plugin as it ships
+        run: |
+          mkdir -p build/like-dislike-for-wp
+          git archive HEAD | tar -x -C build/like-dislike-for-wp
+
+      - name: Run Plugin Check
+        uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: ./build/like-dislike-for-wp
+          # The slug has contained "wp" since the plugin's first release, and wordpress.org
+          # slugs can't be changed, so the warning about it can never be fixed.
+          ignore-codes: trademarked_term

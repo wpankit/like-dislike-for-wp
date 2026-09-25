@@ -1,0 +1,60 @@
+name: Bug report
+description: Something in Like Dislike doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. For questions about setting up or using Like Dislike, please use the [support forum](https://wordpress.org/support/plugin/like-dislike-for-wp/). Security issues go through the [security policy](https://github.com/wpankit/like-dislike-for-wp/security/policy), not here.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Buttons on posts, pages or products
+        - Likes on comments
+        - '"Was this helpful?" and feedback'
+        - Most Liked Posts block or shortcode
+        - Stats, the Likes column or the per-post box
+        - Settings
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Say whether you voted as a logged-in user or as a visitor.
+      placeholder: |
+        1. Show the buttons after posts, with counts shown after voting.
+        2. As a logged-out visitor, open a post and click Like.
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      placeholder: e.g. 3.0.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: WordPress and PHP versions, theme, and caching plugin or CDN
+      placeholder: e.g. WordPress 7.1, PHP 8.3, Twenty Twenty-Five, WP Super Cache
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Errors or logs
+      description: PHP errors from debug.log or browser console errors, if any.
+      render: shell
