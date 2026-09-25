@@ -1,0 +1,44 @@
+{
+	"name": "wpankit/like-dislike-for-wp",
+	"description": "Like and dislike buttons with live counts for posts, pages, products and comments, a \"Was this helpful?\" mode, most liked posts, and stats.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://wordpress.org/plugins/like-dislike-for-wp/",
+	"authors": [
+		{
+			"name": "WPAnkit",
+			"homepage": "https://wpankit.com/"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/wpankit/like-dislike-for-wp/issues",
+		"forum": "https://wordpress.org/support/plugin/like-dislike-for-wp/",
+		"source": "https://github.com/wpankit/like-dislike-for-wp",
+		"security": "https://github.com/wpankit/like-dislike-for-wp/security/policy"
+	},
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"wp-coding-standards/wpcs": "^3.1"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"platform": {
+			"php": "7.4"
+		},
+		"sort-packages": true
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"format": "phpcbf"
+	},
+	"scripts-descriptions": {
+		"lint": "Check the code against the WordPress coding standards and PHP 7.4+ compatibility.",
+		"format": "Fix the coding standards issues that can be fixed automatically."
+	}
+}
